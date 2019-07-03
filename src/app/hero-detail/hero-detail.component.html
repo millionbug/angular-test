@@ -1,5 +1,4 @@
 <div *ngIf="hero"
-  (click)="onSelect(hero)"
 >
   <h2>{{hero.name}}</h2>
   <div><span>id: </span>{{hero.id}}</div>
@@ -9,4 +8,7 @@
       <input [(ngModel)]="hero.name" placeholder="name">
     </label>
   </div>
+  <button (click)="goBack()">
+    go back
+  </button>
 </div>

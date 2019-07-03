@@ -7,7 +7,7 @@ import {Hero} from '../hero';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.scss']
 })
-export class HerosComponent implements OnInit {
+export class HeroesComponent implements OnInit {
 
   constructor(private heroService: HeroService) { }
 
