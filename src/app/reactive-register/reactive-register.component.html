@@ -1,0 +1,67 @@
+<div class="form-container">
+    <div>Reactive 创建你的Google账号</div>
+    <!-- 
+        为什么有的formGroup需要使用[formGroup]="testNgFormGroup"来绑定，有的不需要括号来绑定
+        因为在ts文件的class声明中只声明了testNgFormGroup属性，其他的formControlName并没有
+        声明在class中，而是使用formGroup初始化出来的
+    -->
+    <form [formGroup]="testNgFormGroup" (ngSubmit)="submit()">
+        <div class="form-inline">
+            <label>
+                <input
+                    formControlName="firstName"
+                    name="firstName"
+                    class="form-input" 
+                    type="text" 
+                    placeholder="姓氏" />
+            </label>
+            <label>
+                <input formControlName="lastName" name="lastName" class="form-input" type="text" placeholder="名字"/>
+                <span>
+                </span>
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                <input formControlName="accountName" name="accountName" class="form-input" type="text" placeholder="用户名"/>@gmail.com
+                <span>
+                
+                </span>
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                <input formControlName="password" name="password" class="form-input" type="password" placeholder="密码"/>
+                <span>
+                </span>
+            </label>
+            <label>
+                <input formControlName="repassword" name="repassword" class="form-input" type="password" placeholder="确认密码"/>
+
+            </label>
+        </div>
+
+        <div class="form-inline" formGroupName="adress">
+            地址
+            <label>
+                <input formControlName="street" name="street" class="form-input" type="text" placeholder="街道"/>
+                <span>
+                </span>
+            </label>
+            <label>
+                <input formControlName="city" name="city" class="form-input" type="text" placeholder="城市"/>
+
+            </label>
+            <label>
+                <input formControlName="state" name="state" class="form-input" type="text" placeholder="洲"/>
+    
+            </label>
+            <label>
+                <input formControlName="zip" name="zip" class="form-input" type="text" placeholder="zip"/>
+    
+            </label>
+        </div>
+
+        <button [disabled]="!testNgFormGroup.valid">提交</button>
+    </form>
+</div>

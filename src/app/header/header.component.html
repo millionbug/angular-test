@@ -1,0 +1,70 @@
+<ul class="nav navbar-nav navbar-right fixed-top-right">
+  <li class="dropdown" appDropdown>
+      <a appDropdownTrigger><li class="fa fa-bars fa-2"></li> 库存管理</a>
+      <ul class="dropdown-menu dropdown-menu-left">
+          <li>
+              <a routerLink="inventory/inventory-table/page/1">库存</a>
+          </li>
+          <li>
+              <a routerLink="inventory/inbound-table/page/1">入库</a>
+          </li>
+          <li>
+              <a routerLink="inventory/outbound-table/page/1">出库</a>
+          </li>
+          <li>
+              <a routerLink="inventory/shift-table/page/1">移库</a>
+          </li>
+          <li>
+              <a routerLink="inventory/loss-table/page/1">库损</a>
+          </li>
+      </ul>
+  </li>
+  <li class="dropdown" appDropdown>
+      <a appDropdownTrigger><li class="fa fa-cogs fa-2"></li> 基础资料</a>
+      <ul class="dropdown-menu  dropdown-menu-left">
+          <li>
+              <a routerLink="basic-data/warehouse-map">仓库地图</a>
+          </li>
+          <li>
+              <a routerLink="basic-data/warehouse-table/page/1">仓库资料</a>
+          </li>
+          <li>
+              <a routerLink="basic-data/category-table/page/1">类别资料</a>
+          </li>
+          <li>
+              <a routerLink="basic-data/vendor-table/page/1">供应商资料</a>
+          </li>
+          <li>
+              <a routerLink="basic-data/customer-table/page/1">客户资料</a>
+          </li>
+          <li>
+              <a routerLink="basic-data/staff-table/page/1">员工资料</a>
+          </li>
+      </ul>
+  </li>
+  <li class="dropdown" appDropdown>
+      <a appDropdownTrigger><li class="fa fa-area-chart fa-2"></li> 系统监控</a>
+      <ul class="dropdown-menu  dropdown-menu-left">
+          <li>
+              <a routerLink="sys/sysmonitor">Echarts</a>
+          </li>
+          <li>
+              <a routerLink="sys/sysmonitor">百度地图</a>
+          </li>
+      </ul>
+  </li>
+  <li class="dropdown" appDropdown>
+      <a appDropdownTrigger><li class="fa fa-user-circle fa-2"></li> Admin</a>
+      <ul class="dropdown-menu  dropdown-menu-right">
+          <li>
+              <a routerLink="sys/sysmonitor"><li class="fa fa-user-o fa-2"></li> Profile</a>
+          </li>
+          <li>
+              <a routerLink="sys/sysmonitor"><li class="fa fa-gear fa-2"></li> Settings</a>
+          </li>
+          <li>
+              <a routerLink="/login"><li class="fa fa-sign-out fa-2"></li> Logout</a>
+          </li>
+      </ul>
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+.form-container {
+    width: 750px;
+    margin: auto;
+    margin-top: 300px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 5px;
+    padding: 48px 40px 36px 40px;
+}
+.form-inline {
+    margin-top: 20px;
+}
+.form-input {
+    height: 30px;
+    font-size: 16px;
+}
+label {
+    display: inline-block;
+    vertical-align: top;
+}
