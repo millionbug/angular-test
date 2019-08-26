@@ -16,6 +16,10 @@ import { ReactiveRegisterComponent } from './reactive-register/reactive-register
 import { HeaderComponent } from './header/header.component';
 import { DropdownDirective } from '../directive/dropmenu/dropmenu.directive';
 import { DropdownTriggerDirective } from '../directive/dropmenuTrigger/dropmenuTrigger.directive';
+import { CITestComponent } from './citest/citest.component';
+import { HostChildDirective } from '../directive/testHostApi/testHostApiChild.directive'
+import { HostParentDirective } from '../directive/testHostApi/testHostApiParent.directive'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,10 @@ import { DropdownTriggerDirective } from '../directive/dropmenuTrigger/dropmenuT
     ReactiveRegisterComponent,
     HeaderComponent,
     DropdownDirective,
-    DropdownTriggerDirective
+    DropdownTriggerDirective,
+    CITestComponent,
+    HostChildDirective,
+    HostParentDirective
   ],
   imports: [
     BrowserModule,

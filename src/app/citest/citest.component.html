@@ -1,0 +1,16 @@
+<p>
+  citest works!
+</p>
+
+<div appHostParent [parentName]="'我是你爷爷'">
+  可能是亲爹，也可能不是
+  <div appHostParent [parentName]="'我是你爹'">
+      <div appHostChild [childName]="'i am child'">
+        i am a child; a little child;
+      </div>
+  </div>
+  <div appHostParent [parentName]="'我是你爹的弟弟'">
+
+  </div>
+
+</div>

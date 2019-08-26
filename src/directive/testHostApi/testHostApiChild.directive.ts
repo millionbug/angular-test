@@ -1,5 +1,5 @@
-import { Directive, Host, ElementRef, ContentChild, Output, EventEmitter, Input } from '@angular/core';
-import { HostParent } from './testHostApiParent.directive';
+import { Directive, Host, ElementRef, ContentChild, Output, EventEmitter, Input, HostListener, Optional } from '@angular/core';
+import { HostParentDirective } from './testHostApiParent.directive';
 
 @Directive({
     selector: '[appHostChild]',
@@ -8,10 +8,16 @@ import { HostParent } from './testHostApiParent.directive';
 
 export class HostChildDirective {
     @Input()
-    childName: string;
+    childName: string = 'child';
+
+    @HostListener('click') click(e) {
+        // this.appHostParent.log();
+        this.log();
+    }
 
     constructor(
-        @Host appHostParent: HostParent
+        private el: ElementRef,
+        @Host() @Optional() public appHostParent: HostParentDirective
     ) {}
 
     log() {

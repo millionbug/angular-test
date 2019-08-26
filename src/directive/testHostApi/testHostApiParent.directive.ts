@@ -1,4 +1,4 @@
-import { Directive, ElementRef, ContentChild, Output, EventEmitter, Input } from '@angular/core';
+import { Directive, ElementRef, ContentChild, Output, EventEmitter, Input, HostListener } from '@angular/core';
 
 @Directive({
     selector: '[appHostParent]',
@@ -6,8 +6,15 @@ import { Directive, ElementRef, ContentChild, Output, EventEmitter, Input } from
 })
 
 export class HostParentDirective {
+
+    constructor(private el: ElementRef) { }
+
     @Input()
-    parentName: string;
+    parentName: string = 'parent';
+
+    @HostListener('click') click(e) {
+        this.log();
+    }
 
     log() {
         console.log(this.parentName);
