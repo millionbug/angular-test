@@ -18,7 +18,8 @@ import { DropdownDirective } from '../directive/dropmenu/dropmenu.directive';
 import { DropdownTriggerDirective } from '../directive/dropmenuTrigger/dropmenuTrigger.directive';
 import { CITestComponent } from './citest/citest.component';
 import { HostChildDirective } from '../directive/testHostApi/testHostApiChild.directive'
-import { HostParentDirective } from '../directive/testHostApi/testHostApiParent.directive'
+import { HostParentDirective } from '../directive/testHostApi/testHostApiParent.directive';
+import { RxjsTestComponent } from './rxjs-test/rxjs-test.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HostParentDirective } from '../directive/testHostApi/testHostApiParent.
     DropdownTriggerDirective,
     CITestComponent,
     HostChildDirective,
-    HostParentDirective
+    HostParentDirective,
+    RxjsTestComponent
   ],
   imports: [
     BrowserModule,
